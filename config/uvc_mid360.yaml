@@ -1,5 +1,5 @@
 common:
-  img_topic: "/uvc_camera/image"
+  img_topic: "/uvc_camera/image_sync"
   lid_topic: "/livox/lidar"
   imu_topic: "/livox/imu"
   img_en: 1
@@ -9,10 +9,10 @@ common:
 extrin_calib:
   extrinsic_T: [-0.011, -0.02329, 0.04412]
   extrinsic_R: [1, 0, 0, 0, 1, 0, 0, 0, 1]
-  Rcl: [  0.029955,  -0.999370,   0.019014,
-          0.352669,  -0.007232,  -0.935720,
-          0.935269,   0.034735,   0.352230]
-  Pcl: [ -0.012273,  -0.059590,  -0.068082]  # 根据实际标定结果调整
+  Rcl: [ -0.002695, -0.999995,  0.001475,
+          0.352895, -0.002331, -0.935660,
+          0.935659, -0.002001,  0.352899]
+  Pcl: [ -0.002016, -0.073222, -0.056090]  # FAST-Calib multi_calib_result 2026-05-19
 
 time_offset:
   imu_time_offset: 0.0
@@ -63,7 +63,7 @@ local_map:
 
 uav:
   imu_rate_odom: false
-  gravity_align_en: false
+  gravity_align_en: true
 
 publish:
   dense_map_en: true
