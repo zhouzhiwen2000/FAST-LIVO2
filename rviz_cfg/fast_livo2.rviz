@@ -77,6 +77,38 @@ Visualization Manager:
       Reference Frame: <Fixed Frame>
       Show Trail: false
       Value: true
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: true
+      Length: 1
+      Name: Tracer Base
+      Radius: 0.05000000074505806
+      Reference Frame: tracer_base
+      Show Trail: false
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        aft_mapped:
+          Value: true
+        camera_init:
+          Value: true
+        tracer_base:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        camera_init:
+          aft_mapped:
+            tracer_base:
+              {}
+      Update Interval: 0
+      Value: true
     - Class: rviz/Group
       Displays:
         - Alpha: 1

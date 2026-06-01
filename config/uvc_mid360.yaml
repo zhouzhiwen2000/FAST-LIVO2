@@ -80,4 +80,4 @@ pcd_save:
   pcd_save_en: true
   colmap_output_en: true
   filter_size_pcd: 0.05
-  interval: -1
+  interval: 300

@@ -1,11 +1,12 @@
 <launch>
-  <!-- Live mapping: sensor drivers are already running (/livox/lidar and /uvc_camera/image). -->
+  <!-- Low-memory live mapping: disables accumulated PCD/Colmap saving and enables local map sliding. -->
   <arg name="rviz" default="true" />
   <arg name="car_tf" default="true" />
   <arg name="mid360_frame" default="aft_mapped" />
   <arg name="car_frame" default="tracer_base" />
 
   <rosparam command="load" file="$(find fast_livo)/config/uvc_mid360.yaml" />
+  <rosparam command="load" file="$(find fast_livo)/config/uvc_mid360_lowmem_overrides.yaml" />
 
   <node pkg="fast_livo" type="fastlivo_mapping" name="laserMapping" output="screen">
     <rosparam file="$(find fast_livo)/config/camera_uvc.yaml" />
